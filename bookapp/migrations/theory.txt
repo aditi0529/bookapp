@@ -1,0 +1,42 @@
+DATABASE CONECTIVITY
+===================
+1.Python -mysqlclient- write queries
+"insert into book (%s %s %s)".(t,a,p)
+
+table creation-python datatypes- db types
+
+-->Table creation
+-->migration- switching db is easy through ORM, as our code doesnt need changes,
+only db configuration needs to be updated
+-->object to values and values to object conversion was required
+-->relationships
+
+2.ORM
+===
+Object Relational Mapping
+model class - table
+inbuilt methods to perform DML,DQL operations
+
+a.model class
+Book table
+id,title,author,price..(it will dd id by itself)
+
+class Book()
+title =models.CharField(max_length=30)
+    author = models.CharField(max_length=30)
+    price = models.IntegerField()
+
+b. create DATABASE
+c. settings.py add db settings
+d. pip install mysqlclient 
+e.settings.py -->installed apps
+add ur application
+f.python manage.py makemigrations
+g.python manage.py migrate
+
+
+we can verify multiple tables are created in db.
+one of that is
+bookapp_book
+applicationName_modeClassName
+
